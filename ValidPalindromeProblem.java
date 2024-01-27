@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class ValidPalindromeProblem {
 
     static boolean isValidPalin(String s){
+        //it replaces all non-alphanumneric characters with "" that means 
+        // even if there is a space it will remove the space
         s = s.replaceAll("[^a-zA-Z0-9]","");
         s = s.toLowerCase();
         int i = 0;
