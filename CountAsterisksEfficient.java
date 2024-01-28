@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/count-asterisks/
 import java.util.Scanner;
 
 public class CountAsterisksEfficient {
