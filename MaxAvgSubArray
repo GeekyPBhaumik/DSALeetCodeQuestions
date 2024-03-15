@@ -1,0 +1,18 @@
+//https://leetcode.com/problems/maximum-average-subarray-i/
+class Solution {
+    public double findMaxAverage(int[] nums, int k) {
+        //Sliding Window Technique
+        double maxSum=0;
+        double currSum=0;
+        for(int i=0;i<k;i++){
+          currSum = currSum + (double)nums[i];
+          maxSum = currSum/k;
+        }
+        for(int st=1,en=k;en<nums.length;st++,en++){
+            currSum = currSum - nums[st-1];
+            currSum = currSum + nums[en];
+            maxSum = Math.max(currSum/k,maxSum);
+        }
+        return maxSum;
+    }
+}
